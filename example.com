@@ -1,6 +1,7 @@
 upstream quiknode {
 	server <RCP DOMAIN>;
 }
+
 server {
 	server_name <SERVER URL>;
 
@@ -15,14 +16,12 @@ server {
 	}
 	listen 443 ssl;
 	# add ssl certs below
-
 }
 
 server {
 	if ($host = <SERVER URL>) {
 		return 301 https://$host$request_uri;
 	}
-
 
 	server_name <SERVER URL>;
 	listen 80;
