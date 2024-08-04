@@ -1,5 +1,5 @@
 upstream quiknode {
-server <RCP DOMAIN>;
+	server <RCP DOMAIN>;
 }
 server {
 	server_name <SERVER URL>;
